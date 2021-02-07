@@ -1,0 +1,104 @@
+:root {  /* Declaração de variável no CSS3 - boa prática para a reutilização */
+    --vermelho: #b50915;
+    --preto: #141414;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* capacidade máxima */
+}
+
+body{
+    font-family: 'Arial', Times, serif  /* Google Fontes;  */ ;
+    background: var(--preto);  /* utlizando a variável declara no CSS3  */ 
+    color: white; 
+}
+
+header .container {
+    display: flex; /* joga os elementos para alinha */ 
+    flex-direction: row;
+    align-items: center; /* forma vertical */ 
+    justify-content: space-between;  /* forma horizontal */ 
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none; /* remove o sublinhado dos links */ 
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* Filme principal */
+
+.filme-principal{
+    font-size: 19px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%) /* contrate na imagem  */, url('https://www.themoviedb.org/t/p/original/jOuCWdh0BE6XPu2Vpjl08wDAeFz.jpg');
+    height: 400px;
+    background-size: cover;  /* faz com que o background tome conta do tamanho exato declarado. nesse caso, a imagem se adapta ao tamanho independendo do tamanho real da imagem */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .titulo{
+font-size: 40px;
+font-family: 'Trebuchet MS', Arial, sans-serif;
+margin-top: 10%;
+}
+
+.filme-principal .descricao{
+margin-bottom: 40px;
+margin-top: 10px;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /* altera o tipo do cursor  */
+    transition: .3s ease all; /* interessante - animação  */ 
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 5px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 40%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 10px;
+}
+
+
